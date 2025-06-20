@@ -24,3 +24,6 @@ spd = {
 	x: 0,
 	y: 0
 }
+
+
+light_source = instance_create_layer(x, y, layer, oLightSource)
