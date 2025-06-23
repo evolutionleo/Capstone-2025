@@ -1,6 +1,6 @@
 /// @desc 
 
-#region Physics variables
+#region Variables
 
 walkspd = 6
 jumpspd = 11
@@ -33,10 +33,11 @@ coyote_time_max = 6
 jump_buffer = 0
 jump_buffer_max = 6
 
+
 holding = undefined
 
 #endregion
-#region Physics Methods
+#region Methods
 
 jump_was_cut = false
 
@@ -50,6 +51,17 @@ jumpCut = function() {
 		jump_was_cut = true
 		spd.y *= 0.5
 	}
+}
+
+setDefaultInputs = function() {
+	kup = false
+	kleft = false
+	kright = false
+	kdown = false
+	
+	kinteract = false
+	kjump = false
+	kpickup = false
 }
 
 
