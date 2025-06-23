@@ -1,26 +1,35 @@
 /// @desc 
 
 if (active) {
+	// fading in (to black)
 	if (!reversed) {
 		timer++
 		
-		alpha = timer / timer_max_in
+		alpha = timer / duration_in
 		
-		if (timer >= timer_max_in) {
+		
+		// finish the fade in
+		if (timer >= duration_in) {
 			reversed = true
-			timer = timer_max_out
+			timer = duration_out
 			
 			room_goto(dest_room)
 		}
 	}
+	// fading out to the next room
 	else {
 		timer--
 		
-		alpha = timer / timer_max_out
+		alpha = timer / duration_out
 		
+		
+		// finish the fade out
 		if (timer <= 0) {
 			active = false
-			surf = undefined
+			
+			with(oPlayer) {
+				inputs_locked = false
+			}
 		}
 	}
 }

@@ -1,16 +1,21 @@
 /// @desc 
 
 // inputs
-kup = keyboard_check(ord("W"))
-kleft = keyboard_check(ord("A"))
-kdown = keyboard_check(ord("S"))
-kright = keyboard_check(ord("D"))
+if (!inputs_locked) {
+	kup = keyboard_check(ord("W"))
+	kleft = keyboard_check(ord("A"))
+	kdown = keyboard_check(ord("S"))
+	kright = keyboard_check(ord("D"))
 
-kjump = keyboard_check_pressed(vk_space)
-kjump_hold = keyboard_check(vk_space)
+	kjump = keyboard_check_pressed(vk_space)
+	kjump_hold = keyboard_check(vk_space)
 
-kinteract = keyboard_check_pressed(ord("E"))
-kpickup = keyboard_check_pressed(ord("F"))
+	kinteract = keyboard_check_pressed(ord("E"))
+	kpickup = keyboard_check_pressed(ord("F"))
+}
+else {
+	setDefaultInputs()
+}
 
 movedir.x = kright - kleft
 movedir.y = kdown - kup

@@ -2,10 +2,8 @@
 
 alpha = 0
 timer = 0
-timer_max_in = 60
-timer_max_out = 60
-
-surf = undefined
+duration_in = 60
+duration_out = 60
 
 active = false
 reversed = false
@@ -19,6 +17,10 @@ start = function(_dest_room) {
 	
 	active = true
 	reversed = false
+	
+	with(oPlayer) {
+		inputs_locked = true
+	}
 	
 	dest_room = _dest_room
 }

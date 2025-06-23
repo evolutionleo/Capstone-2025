@@ -36,6 +36,8 @@ jump_buffer_max = 6
 
 holding = undefined
 
+inputs_locked = false
+
 #endregion
 #region Methods
 
@@ -59,8 +61,10 @@ setDefaultInputs = function() {
 	kright = false
 	kdown = false
 	
-	kinteract = false
 	kjump = false
+	kjump_hold = false
+	
+	kinteract = false
 	kpickup = false
 }
 
