@@ -20,6 +20,7 @@ else {
 movedir.x = kright - kleft
 movedir.y = kdown - kup
 
+#region Physics
 
 // fix slightly early or late jump inputs
 if (place_meeting(x, y+1, oWall))
@@ -89,3 +90,27 @@ if (place_meeting(x, y + spd.y, oWall)) {
 }
 y += spd.y
 
+#endregion
+#region Picking up items
+
+if (kpickup) {
+	if (holding == undefined) {
+		with(instance_place(x, y, global.holdable_objects)) {
+			if (!is_undefined(held_by)) {
+				held_by = other
+				other.holding = id
+			}
+			else if (held_by == other) {
+				held_by = undefined
+				other.holding = undefined
+			}
+		}
+	}
+}
+
+if (instance_exists(holding)) {
+	holding.x = x
+	holding.y = y - 100
+}
+
+#endregion

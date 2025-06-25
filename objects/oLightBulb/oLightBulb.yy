@@ -12,10 +12,7 @@
     "name":"Level Elements",
     "path":"folders/Objects/Level Elements.yy",
   },
-  "parentObjectId":{
-    "name":"oItem",
-    "path":"objects/oItem/oItem.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,11 +31,19 @@
         "\"constant\"",
         "\"variable\"",
       ],"multiselect":false,"name":"output_type","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"constant\"","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"toggle_interval","filters":[],"listItems":[],"multiselect":false,"name":"toggle_interval","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"60","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"active","filters":[],"listItems":[],"multiselect":false,"name":"active","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sBulb",
+    "path":"sprites/sBulb/sBulb.yy",
+  },
   "spriteMaskId":null,
+  "tags":[
+    "holdable",
+  ],
   "visible":true,
 }
