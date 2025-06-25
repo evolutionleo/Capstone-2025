@@ -1,3 +1,4 @@
 /// @desc 
 
-bulb = noone
+// the bulb held by the socket
+holding = undefined

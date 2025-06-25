@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"oInit",
+  "%Name":"oBridgePlaceholder",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oInit",
+  "name":"oBridgePlaceholder",
   "overriddenProperties":[],
   "parent":{
-    "name":"Controllers",
-    "path":"folders/Objects/Controllers.yy",
+    "name":"Level Elements",
+    "path":"folders/Objects/Level Elements.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oPowerInput",
+    "path":"objects/oPowerInput/oPowerInput.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,7 +32,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sWall",
+    "path":"sprites/sWall/sWall.yy",
+  },
   "spriteMaskId":null,
+  "tags":[
+    "solid",
+  ],
   "visible":true,
 }

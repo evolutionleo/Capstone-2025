@@ -1,20 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"oLightBulbSocket",
+  "%Name":"oPowerTest",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oLightBulbSocket",
-  "overriddenProperties":[],
+  "name":"oPowerTest",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPowerInput","path":"objects/oPowerInput/oPowerInput.yy",},"propertyId":{"name":"input_channel","path":"objects/oPowerInput/oPowerInput.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+  ],
   "parent":{
     "name":"Level Elements",
     "path":"folders/Objects/Level Elements.yy",
   },
   "parentObjectId":{
-    "name":"oPowerOutput",
-    "path":"objects/oPowerOutput/oPowerOutput.yy",
+    "name":"oPowerInput",
+    "path":"objects/oPowerInput/oPowerInput.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,13 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sBulbSocket",
-    "path":"sprites/sBulbSocket/sBulbSocket.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "tags":[
-    "power output",
-  ],
   "visible":true,
 }

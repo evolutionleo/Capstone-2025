@@ -34,5 +34,8 @@
     "path":"sprites/sWall/sWall.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "solid",
+  ],
   "visible":false,
 }

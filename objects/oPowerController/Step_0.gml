@@ -1,5 +1,9 @@
 /// @desc 
 
+for(var i = 0; i < max_channels; i++) {
+	channels[$ i] = true
+}
+
 with(oPowerOutput) {
 	if (!active) {
 		other.channels[$ output_channel] = false
@@ -11,7 +15,7 @@ with(oPowerOutput) {
 
 with(oPowerInput) {
 	if (other.channels[$ input_channel])
-		activate()
+		_activate()
 	else
-		deactivate()
+		_deactivate()
 }
