@@ -1,18 +1,18 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rFirst",
+  "%Name":"r0_1",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_4A88F96C","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_11C34A60","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_7DD18DCA","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_624B7C00","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_D8C1C95","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_7EF6B039","path":"rooms/rFirst/rFirst.yy",},
-    {"name":"inst_6032C7E","path":"rooms/rFirst/rFirst.yy",},
+    {"name":"inst_4A88F96C","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_11C34A60","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_7DD18DCA","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_624B7C00","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_D8C1C95","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_7EF6B039","path":"rooms/r0_1/r0_1.yy",},
+    {"name":"inst_6032C7E","path":"rooms/r0_1/r0_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -20,11 +20,11 @@
         {"$GMRInstance":"v2","%Name":"inst_624B7C00","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_624B7C00","objectId":{"name":"oDialogueTest","path":"objects/oDialogueTest/oDialogueTest.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":704.0,},
         {"$GMRInstance":"v2","%Name":"inst_D8C1C95","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_D8C1C95","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"propertyId":{"name":"passive","path":"objects/oLevelTransition/oLevelTransition.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"propertyId":{"name":"dest_room","path":"objects/oLevelTransition/oLevelTransition.yy",},"resource":{"name":"rSecond","path":"rooms/rSecond/rSecond.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rSecond",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"propertyId":{"name":"dest_room","path":"objects/oLevelTransition/oLevelTransition.yy",},"resource":{"name":"r0_2","path":"rooms/r0_2/r0_2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"r0_2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":4.5,"x":1664.0,"y":640.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v2","%Name":"inst_7DD18DCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DD18DCA","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":256.0,"y":800.0,},
+        {"$GMRInstance":"v2","%Name":"inst_7DD18DCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DD18DCA","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":736.0,},
       ],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Walls","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_4A88F96C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4A88F96C","objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":17.5,"scaleY":2.5,"x":-32.0,"y":992.0,},
@@ -34,7 +34,7 @@
       ],"layers":[],"name":"Walls","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sForestBackground","path":"sprites/sForestBackground/sForestBackground.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rFirst",
+  "name":"r0_1",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",
