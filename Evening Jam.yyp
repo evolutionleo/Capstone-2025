@@ -463,6 +463,7 @@
     {"id":{"name":"sL1Frame3","path":"sprites/sL1Frame3/sL1Frame3.yy",},},
     {"id":{"name":"sLevelTransition","path":"sprites/sLevelTransition/sLevelTransition.yy",},},
     {"id":{"name":"sLight","path":"sprites/sLight/sLight.yy",},},
+    {"id":{"name":"sNPCPlaceholder","path":"sprites/sNPCPlaceholder/sNPCPlaceholder.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
     {"id":{"name":"sRobot","path":"sprites/sRobot/sRobot.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},

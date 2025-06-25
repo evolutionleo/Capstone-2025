@@ -21,6 +21,8 @@ startDialogue = function() {
 endDialogue = function() {
 	oPlayer.inputs_locked = false
 	in_dialogue = false
+	
+	first_frame = true
 }
 
 nextLine = function() {
@@ -33,4 +35,7 @@ nextLine = function() {
 }
 
 
-interact = startDialogue
+interact = function() {
+	if (!first_frame)
+		startDialogue()
+}
