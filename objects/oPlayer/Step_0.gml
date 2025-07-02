@@ -93,6 +93,12 @@ if (place_meeting(x, y + spd.y, global.solid_objects)) {
 }
 y += spd.y
 
+
+// death condition
+if (y > room_height + 300) {
+	die()
+}
+
 #endregion
 #region Picking up items
 

@@ -68,6 +68,9 @@ setDefaultInputs = function() {
 	kpickup = false
 }
 
+die = function() {
+	room_restart()
+}
+
 
 #endregion
-
