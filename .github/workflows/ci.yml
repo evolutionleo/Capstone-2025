@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: windows-2022
+    environment: Default Environment
     steps:
       # Check out the repository with the GameMaker project
       - uses: actions/checkout@v4
@@ -22,7 +23,7 @@ jobs:
           "yyp-path=$yyp" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
       # This step sets up the GameMaker build CLI tool Igor https://github.com/bscotch/igor-setup
       - name: use Igor Setup
-        uses: bscotch/igor-setup@v3
+        uses: bscotch/igor-setup@v4
         id: igor
         with:
           target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
