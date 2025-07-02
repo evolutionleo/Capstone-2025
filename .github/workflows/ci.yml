@@ -18,11 +18,12 @@ jobs:
         Write-Output "YYP file found at: $yyp"
         "yyp-path=$yyp" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
     - name: use Igor Setup
-      uses: bscotch/igor-setup@v2.0.0
+      uses: bscotch/igor-setup@v2
       id: igor
       with:
         target-yyp: ${{ steps.find_yyp.outputs.yyp-path }}
         access-key: ${{ secrets.ACCESS_KEY }}
+        runtime-version: 2024.13.1.193
     - name: use Igor Build
       uses: bscotch/igor-build@v1
       id: build
