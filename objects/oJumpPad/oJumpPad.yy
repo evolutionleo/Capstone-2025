@@ -1,0 +1,46 @@
+{
+  "$GMObject":"",
+  "%Name":"oJumpPad",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
+  "managed":true,
+  "name":"oJumpPad",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPowerInput","path":"objects/oPowerInput/oPowerInput.yy",},"propertyId":{"name":"active","path":"objects/oPowerInput/oPowerInput.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
+  "parent":{
+    "name":"Level Elements",
+    "path":"folders/Objects/Level Elements.yy",
+  },
+  "parentObjectId":{
+    "name":"oPowerInput",
+    "path":"objects/oPowerInput/oPowerInput.yy",
+  },
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"jumpspd","filters":[],"listItems":[],"multiselect":false,"name":"jumpspd","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"23","varType":0,},
+  ],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+    "name":"sJumpPadPlaceholder",
+    "path":"sprites/sJumpPadPlaceholder/sJumpPadPlaceholder.yy",
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}
