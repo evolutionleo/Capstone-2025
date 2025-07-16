@@ -488,8 +488,6 @@
     {"id":{"name":"sNPC1","path":"sprites/sNPC1/sNPC1.yy",},},
     {"id":{"name":"sNPCPlaceholder","path":"sprites/sNPCPlaceholder/sNPCPlaceholder.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
-    {"id":{"name":"sPlayer1","path":"sprites/sPlayer1/sPlayer1.yy",},},
-    {"id":{"name":"sPlayer2","path":"sprites/sPlayer2/sPlayer2.yy",},},
     {"id":{"name":"sRobot","path":"sprites/sRobot/sRobot.yy",},},
     {"id":{"name":"sSocket1","path":"sprites/sSocket1/sSocket1.yy",},},
     {"id":{"name":"sSocket2","path":"sprites/sSocket2/sSocket2.yy",},},
