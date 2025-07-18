@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"oNPCPlaceholder",
+  "%Name":"oDialogueTrigger",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oNPCPlaceholder",
+  "name":"oDialogueTrigger",
   "overriddenProperties":[],
   "parent":{
     "name":"Level Elements",
@@ -33,12 +33,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sNPC1",
-    "path":"sprites/sNPC1/sNPC1.yy",
+    "name":"sDialogueTrigger",
+    "path":"sprites/sDialogueTrigger/sDialogueTrigger.yy",
   },
   "spriteMaskId":null,
-  "tags":[
-    "interactable",
-  ],
   "visible":true,
 }

@@ -5,11 +5,25 @@ draw_self()
 
 
 if (in_dialogue) {
-draw_set_font(fNPC)
-draw_set_color(c_black)
+	
+var parts = string_split(current_text, ":")
+var character = string_trim(parts[0])
+var line = string_trim(parts[1])
 
-var _x = x
-var _y = y-100
+if (character == "" or character == "гг") {
+	var _x = oPlayer.x
+	var _y = oPlayer.y
+}
+else {
+	var _x = x
+	var _y = y
+}
+
+if (character == "") {
+	line = "(" + line + ")"
+}
+
+_y -= 100
 
 var f = 1/2
 
@@ -22,10 +36,7 @@ draw_sprite_ext(sBigDialogueCloud, 0, _x, _y, f, f, 0, c_white, 1)
 _x -= sprite_get_xoffset(sBigDialogueCloud)*f
 _x += 20
 
-draw_text(_x, _y, current_text)
+scribble(line).starting_format("fNPC", c_black).draw(_x, _y, typist)
 
 
-
-draw_set_color(c_white)
-draw_set_font(-1)
 }

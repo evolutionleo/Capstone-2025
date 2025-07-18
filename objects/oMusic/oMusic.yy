@@ -1,21 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"oNPCPlaceholder",
+  "%Name":"oMusic",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":77,"eventType":9,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oNPCPlaceholder",
+  "name":"oMusic",
   "overriddenProperties":[],
   "parent":{
-    "name":"Level Elements",
-    "path":"folders/Objects/Level Elements.yy",
+    "name":"Controllers",
+    "path":"folders/Objects/Controllers.yy",
   },
-  "parentObjectId":{
-    "name":"oNPC",
-    "path":"objects/oNPC/oNPC.yy",
-  },
-  "persistent":false,
+  "parentObjectId":null,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -32,13 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sNPC1",
-    "path":"sprites/sNPC1/sNPC1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "tags":[
-    "interactable",
-  ],
   "visible":true,
 }

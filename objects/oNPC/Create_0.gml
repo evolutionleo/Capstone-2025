@@ -1,10 +1,12 @@
 /// @desc 
 
-lines = []
 current_line = 0
 current_text = ""
 
 in_dialogue = false
+
+typist = scribble_typist(false)
+typist.in(1, 0)
 
 
 first_frame = false

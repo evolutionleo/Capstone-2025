@@ -3,6 +3,7 @@
   "%Name":"oBridgeAdvanced",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oBridgeAdvanced",
@@ -11,7 +12,10 @@
     "name":"Level Elements",
     "path":"folders/Objects/Level Elements.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oPowerInput",
+    "path":"objects/oPowerInput/oPowerInput.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -26,12 +30,13 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v1","%Name":"direction","filters":[],"listItems":[
+    {"$GMObjectProperty":"v1","%Name":"expand_direction","filters":[],"listItems":[
         "\"up\"",
         "\"down\"",
         "\"right\"",
         "\"left\"",
-      ],"multiselect":false,"name":"direction","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"up\"","varType":6,},
+      ],"multiselect":false,"name":"expand_direction","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"up\"","varType":6,},
+    {"$GMObjectProperty":"v1","%Name":"expand_speed","filters":[],"listItems":[],"multiselect":false,"name":"expand_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
