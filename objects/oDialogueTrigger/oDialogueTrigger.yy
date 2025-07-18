@@ -3,10 +3,13 @@
   "%Name":"oDialogueTrigger",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oDialogueTrigger",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oNPC","path":"objects/oNPC/oNPC.yy",},"propertyId":{"name":"lines","path":"objects/oNPC/oNPC.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\": сосал...\\n:да уж, куда деваться...\"",},
+  ],
   "parent":{
     "name":"Level Elements",
     "path":"folders/Objects/Level Elements.yy",
@@ -37,5 +40,5 @@
     "path":"sprites/sDialogueTrigger/sDialogueTrigger.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

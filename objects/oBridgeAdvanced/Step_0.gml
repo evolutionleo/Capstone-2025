@@ -5,13 +5,15 @@ if (active) {
 	yscale_prev = image_yscale
 	
 	
-	if (expand_direction == "left" or expand_direction == "right")
-		image_xscale += expand_speed
-	else
-		image_yscale += expand_speed
+	reverse_factor = is_reversed ? -1 : 1
 	
-	image_xscale = clamp(image_xscale, 0, max_xscale)
-	image_yscale = clamp(image_yscale, 0, max_yscale)
+	if (expand_direction == "left" or expand_direction == "right")
+		image_xscale += expand_speed * reverse_factor
+	else
+		image_yscale += expand_speed * reverse_factor
+	
+	image_xscale = clamp(image_xscale, 0.1, max_xscale)
+	image_yscale = clamp(image_yscale, 0.1, max_yscale)
 	
 	
 	// bumped into player
@@ -19,4 +21,7 @@ if (active) {
 		image_xscale = xscale_prev
 		image_yscale = yscale_prev
 	}
+	
+	occluder.xscale = image_xscale
+	occluder.yscale = image_yscale
 }

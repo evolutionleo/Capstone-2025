@@ -7,9 +7,7 @@
   ],
   "managed":true,
   "name":"oJumpPad",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oPowerInput","path":"objects/oPowerInput/oPowerInput.yy",},"propertyId":{"name":"active","path":"objects/oPowerInput/oPowerInput.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
-  ],
+  "overriddenProperties":[],
   "parent":{
     "name":"Level Elements",
     "path":"folders/Objects/Level Elements.yy",

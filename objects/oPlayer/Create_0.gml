@@ -2,6 +2,11 @@
 
 #region Variables
 
+has_bulb = true
+alive_timer_max = 60 * 7 // 5 seconds
+alive_timer = alive_timer_max
+
+
 walkspd = 6
 jumpspd = 11
 
@@ -39,7 +44,7 @@ holding = undefined
 inputs_locked = false
 
 
-
+just_teleported = false
 
 #endregion
 #region Methods
@@ -69,10 +74,49 @@ setDefaultInputs = function() {
 	
 	kinteract = false
 	kpickup = false
+	
+	keject = false
 }
 
 die = function() {
 	room_restart()
+}
+
+ejectBulb = function() {
+	if (!has_bulb) {
+		return
+	}
+	
+	if (holding) {
+		holding.held_by = undefined
+		holding = undefined
+	}
+	
+	has_bulb = false
+	var bulb = instance_create_layer(x, y - 100, "Instances", oLightBulb)
+	holding = bulb
+	bulb.held_by = self
+	
+	alive_timer = alive_timer_max
+}
+
+insertBulb = function() {
+	if (has_bulb) {
+		return
+	}
+	
+	if (!holding) {
+		return
+	}
+	
+	if (holding.object_index != oLightBulb) {
+		return
+	}
+	
+	
+	instance_destroy(holding)
+	holding = undefined
+	has_bulb = true
 }
 
 

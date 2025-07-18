@@ -1,5 +1,7 @@
 /// @desc 
 
+active = false
+
 activate = function() {}
 deactivate = function() {}
 

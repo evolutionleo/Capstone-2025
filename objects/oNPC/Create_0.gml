@@ -1,5 +1,11 @@
 /// @desc 
 
+
+
+if (is_string(lines)) {
+	lines = string_split(lines, "\n")
+}
+
 current_line = 0
 current_text = ""
 
@@ -8,7 +14,7 @@ in_dialogue = false
 typist = scribble_typist(false)
 typist.in(1, 0)
 
-
+triggered = false
 first_frame = false
 
 startDialogue = function() {
@@ -38,6 +44,8 @@ nextLine = function() {
 
 
 interact = function() {
-	if (!first_frame)
+	if (!first_frame and (!triggered or is_repeatable)) {
+		triggered = true
 		startDialogue()
+	}
 }

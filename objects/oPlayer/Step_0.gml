@@ -137,3 +137,29 @@ if (kinteract) {
 }
 
 #endregion
+#region Bulb insert/eject
+
+if (keject) {
+	if (holding) {
+		insertBulb()
+	}
+	else {
+		ejectBulb()
+	}
+}
+
+
+if (!has_bulb) {
+	alive_timer--
+	image_blend = c_red
+}
+else {
+	alive_timer = alive_timer_max
+	image_blend = c_white
+}
+
+if (alive_timer <= 0)
+	die()
+
+
+#endregion

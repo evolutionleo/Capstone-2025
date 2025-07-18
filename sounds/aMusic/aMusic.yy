@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.6559864,
+  "duration":146.34148,
   "name":"aMusic",
   "parent":{
     "name":"Sounds",

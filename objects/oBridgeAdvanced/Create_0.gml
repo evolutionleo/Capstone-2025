@@ -14,8 +14,10 @@ else
 	sprite_index = sBridgeDownRight
 
 
-if (dir == "left" or dir == "right") {
-	image_xscale = 0.1
+if (!is_reversed) {
+	if (dir == "left" or dir == "right") {
+		image_xscale = 0.1
+	}
+	else
+		image_yscale = 0.1
 }
-else
-	image_yscale = 0.1

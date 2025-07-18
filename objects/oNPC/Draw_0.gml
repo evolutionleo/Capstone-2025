@@ -5,25 +5,35 @@ draw_self()
 
 
 if (in_dialogue) {
-	
-var parts = string_split(current_text, ":")
-var character = string_trim(parts[0])
-var line = string_trim(parts[1])
 
-if (character == "" or character == "гг") {
-	var _x = oPlayer.x
-	var _y = oPlayer.y
+var split_point = string_pos(":", current_text)
+var character, line
+if (split_point != 0) {
+	character = string_trim(string_copy(current_text, 1, split_point-1))
+	line = string_trim(string_copy(current_text, split_point+1, string_length(current_text)-split_point))
 }
 else {
-	var _x = x
-	var _y = y
+	character = ""
+	line = current_text
+}
+
+line = string_replace_all(line, "…", "...")
+
+var _x, _y
+if (character == "" or character == "гг") {
+	_x = oPlayer.x
+	_y = oPlayer.bbox_top
+}
+else {
+	_x = (bbox_right + bbox_left) / 2
+	_y = bbox_top
 }
 
 if (character == "") {
 	line = "(" + line + ")"
 }
 
-_y -= 100
+_y -= 10
 
 var f = 1/2
 
@@ -36,7 +46,11 @@ draw_sprite_ext(sBigDialogueCloud, 0, _x, _y, f, f, 0, c_white, 1)
 _x -= sprite_get_xoffset(sBigDialogueCloud)*f
 _x += 20
 
-scribble(line).starting_format("fNPC", c_black).draw(_x, _y, typist)
+_y -= 40
+
+var max_w = sprite_get_width(sBigDialogueCloud)*f-30
+var max_h = sprite_get_height(sBigDialogueCloud)*f-40
+scribble(line).starting_format("fNPC", c_black).fit_to_box(max_w, max_h, true).draw(_x, _y, typist)
 
 
 }
