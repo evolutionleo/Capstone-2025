@@ -41,7 +41,10 @@
     "name":"sBulb",
     "path":"sprites/sBulb/sBulb.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"sWall",
+    "path":"sprites/sWall/sWall.yy",
+  },
   "tags":[
     "holdable",
   ],
