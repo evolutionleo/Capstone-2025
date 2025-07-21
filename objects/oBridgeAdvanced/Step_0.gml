@@ -21,7 +21,4 @@ if (active) {
 		image_xscale = xscale_prev
 		image_yscale = yscale_prev
 	}
-	
-	occluder.xscale = image_xscale
-	occluder.yscale = image_yscale
 }

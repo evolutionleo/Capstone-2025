@@ -1,3 +1,0 @@
-/// @desc 
-
-renderer.Free()
