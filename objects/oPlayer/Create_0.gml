@@ -7,8 +7,7 @@ alive_timer_max = 60 * 7 // 5 seconds
 alive_timer = alive_timer_max
 
 
-walkspd = 6
-jumpspd = 11
+
 
 // walking acceleration/deceleration
 
