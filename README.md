@@ -36,14 +36,14 @@ Light up the world around you and find out its secrets!
 
 ## Our Team 🤵🤵‍♀
 
-- Dmitry Korletynu
+- Dmitry Korletynu (fantom73d)
   - team leader, worked on the Art Style and Game/Level design
-- Lev Ivanov
+- Lev Ivanov (evolutionleo)
   - main programmer
-- Ulyana Yanovitskaya
+- Ulyana Yanovitskaya (polshabyaka)
   - worked on the Narrative and Level Design
-- Veronika Levasheva
+- Veronika Levasheva (ffountainer)
   - made the Soundtracks and weekly Documentation, contributed to the Narrative design
-- Bulat Shigapov
+- Bulat Shigapov (Ray3264)
   - worked on the Art Style
 
