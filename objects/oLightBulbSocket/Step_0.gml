@@ -15,3 +15,8 @@ else {
 }
 
 active = (holding != undefined) and (holding.active)
+
+
+if (holding) {
+	
+}

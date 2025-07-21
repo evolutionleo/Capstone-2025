@@ -1,13 +1,13 @@
 /// @desc find the out door
-var my_target = noone
-var from = id
-var to = to_id
+
+var other_target = noone
+var other_door_id = door_id
+var other_id = id
 
 with(oDoorTeleporter) {
-	if (from_id == to) {
-		my_target = id
-		target = from
+	if (door_id == other_door_id and id != other_id) {
+		other_target = id
 	}
 }
 
-self.target = my_target
+target = other_target
