@@ -1,7 +1,7 @@
 /// @desc 
 
 if (instance_exists(target) and place_meeting(x, y, oPlayer) and !oPlayer.just_teleported) {
-	if (oPlayer.kup) {
+	if (keyboard_check_pressed(ord("W"))) {
 		// teleport to the other door
 		oPlayer.x = target.x
 		oPlayer.y = target.y + (oPlayer.y - y)
