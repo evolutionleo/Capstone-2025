@@ -19,6 +19,7 @@
     {"name":"inst_34073202","path":"rooms/l1_7/l1_7.yy",},
     {"name":"inst_68A8537D","path":"rooms/l1_7/l1_7.yy",},
     {"name":"inst_7E4A1BC0","path":"rooms/l1_7/l1_7.yy",},
+    {"name":"inst_232EF424","path":"rooms/l1_7/l1_7.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -43,6 +44,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oBridgeAdvanced","path":"objects/oBridgeAdvanced/oBridgeAdvanced.yy",},"propertyId":{"name":"expand_direction","path":"objects/oBridgeAdvanced/oBridgeAdvanced.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"\"down\"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":10.6015625,"x":3896.0,"y":1304.5,},
         {"$GMRInstance":"v2","%Name":"inst_7E4A1BC0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7E4A1BC0","objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":12.355469,"x":3960.0,"y":0.0,},
+        {"$GMRInstance":"v2","%Name":"inst_232EF424","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_232EF424","objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":31.546875,"x":-73.64136,"y":0.0,},
       ],"layers":[],"name":"Walls","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_68A8537D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_68A8537D","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.859375,"scaleY":11.109375,"x":3960.0,"y":1288.0,},
