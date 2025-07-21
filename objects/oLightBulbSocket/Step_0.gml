@@ -18,5 +18,8 @@ active = (holding != undefined) and (holding.active)
 
 
 if (holding) {
-	
+	sprite_index = sSocketFull
+}
+else {
+	sprite_index = sSocketEmpty
 }
