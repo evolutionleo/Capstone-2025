@@ -2,7 +2,6 @@
 
 if (output_type == "constant") {
 	active = true
-	light.alpha = active ? 1 : 0
 }
 else {
 	timer++
@@ -10,8 +9,6 @@ else {
 		timer = 0
 		active = !active
 	}
-	
-	light.alpha = active ? 1-(timer/toggle_interval) : 0
 }
 
 
@@ -37,9 +34,3 @@ if (place_meeting(x, y + spd.y, global.solid_objects)) {
 	spd.y = 0
 }
 y += spd.y
-
-
-
-
-light.x = x
-light.y = y
