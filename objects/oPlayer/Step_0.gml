@@ -150,10 +150,22 @@ if (keject) {
 
 
 if (!has_bulb) {
+	if (holding) {
+		sprite_index = sPlayerUnpoweredHolding
+	}
+	else {
+		sprite_index = sPlayerUnpowered
+	}
 	alive_timer--
 	image_blend = c_red
 }
 else {
+	if (holding) {
+		sprite_index = sPlayerPoweredHolding
+	}
+	else {
+		sprite_index = sPlayerPowered
+	}
 	alive_timer = alive_timer_max
 	image_blend = c_white
 }
