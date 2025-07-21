@@ -12,6 +12,8 @@
     {"name":"inst_D8C1C95","path":"rooms/l1_1/l1_1.yy",},
     {"name":"inst_7EF6B039","path":"rooms/l1_1/l1_1.yy",},
     {"name":"inst_6032C7E","path":"rooms/l1_1/l1_1.yy",},
+    {"name":"inst_5DDDD7CA","path":"rooms/l1_1/l1_1.yy",},
+    {"name":"inst_658CC87D","path":"rooms/l1_1/l1_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -20,6 +22,8 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"propertyId":{"name":"passive","path":"objects/oLevelTransition/oLevelTransition.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"propertyId":{"name":"dest_room","path":"objects/oLevelTransition/oLevelTransition.yy",},"resource":{"name":"l1_2","path":"rooms/l1_2/l1_2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"l1_2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":4.5,"x":1664.0,"y":640.0,},
+        {"$GMRInstance":"v2","%Name":"inst_5DDDD7CA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5DDDD7CA","objectId":{"name":"oDoorTeleporter","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":928.0,},
+        {"$GMRInstance":"v2","%Name":"inst_658CC87D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_658CC87D","objectId":{"name":"oDoorTeleporter","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":544.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_7DD18DCA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7DD18DCA","objectId":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":544.0,"y":864.0,},
