@@ -13,6 +13,7 @@
     {"name":"inst_51ECB63B","path":"rooms/l2_1/l2_1.yy",},
     {"name":"inst_2D429409","path":"rooms/l2_1/l2_1.yy",},
     {"name":"inst_4F63AA55","path":"rooms/l2_1/l2_1.yy",},
+    {"name":"inst_528116D2","path":"rooms/l2_1/l2_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -30,9 +31,11 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oDoorTeleporter","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"propertyId":{"name":"to_id","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"oDoorTeleporter","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"propertyId":{"name":"from_id","path":"objects/oDoorTeleporter/oDoorTeleporter.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.796875,"scaleY":2.171875,"x":1797.5,"y":232.0,},
-        {"$GMRInstance":"v2","%Name":"inst_51ECB63B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_51ECB63B","objectId":{"name":"oBridgeAdvanced","path":"objects/oBridgeAdvanced/oBridgeAdvanced.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":3.90625,"scaleY":1.0,"x":1730.0,"y":371.0,},
+        {"$GMRInstance":"v2","%Name":"inst_51ECB63B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_51ECB63B","objectId":{"name":"oBridgeAdvanced","path":"objects/oBridgeAdvanced/oBridgeAdvanced.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.765625,"scaleY":1.0,"x":1730.0,"y":371.0,},
       ],"layers":[],"name":"wall","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v2","%Name":"inst_528116D2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_528116D2","objectId":{"name":"oLevelTransition","path":"objects/oLevelTransition/oLevelTransition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.921875,"scaleY":4.65625,"x":2035.0,"y":72.0,},
+      ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"sL2Frame1","path":"sprites/sL2Frame1/sL2Frame1.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"l2_1",
