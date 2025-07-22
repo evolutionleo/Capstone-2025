@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using Objects;
+using UnityEngine;
 
 public class LampHandler : MonoBehaviour
 {
@@ -11,10 +13,42 @@ public class LampHandler : MonoBehaviour
     [SerializeField] private float timeWithoutLampToDie = 5f;
     private float timeWithoutLamp;
     private Animator _animator;
+    private float dropCooldown = 0.1f;
+    private float dropCooldownTimer = 0f;
+    private bool _isEnabled;
 
     private void Start()
     {
-        _animator = GetComponent<Animator>();
+        _animator = GetComponentInChildren<Animator>();
+    }
+
+    public void ReactToBulb(Bulb bulb)
+    {
+        if (Input.GetKey(KeyCode.Q) && !LampInHead)
+        {
+            PickLampToHead(bulb);
+        }
+
+        if (Input.GetKey(KeyCode.E) && !LampInHand)
+        {
+            PickLampToHand(bulb);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Bulb bulb))
+        {
+            ReactToBulb(bulb);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.TryGetComponent(out Bulb bulb))
+        {
+            ReactToBulb(bulb);
+        }
     }
 
     private void Awake()
@@ -24,11 +58,14 @@ public class LampHandler : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
         Instance = this;
     }
 
     private void Update()
     {
+        if (dropCooldownTimer > 0f)
+            dropCooldownTimer -= Time.deltaTime;
         HandleInput();
         SetAnimator();
         if (!LampInHead)
@@ -53,39 +90,74 @@ public class LampHandler : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if(!_isEnabled) return;
+        if (Input.GetKey(KeyCode.Q))
         {
             if (LampInHead)
                 DropLampFromHead();
-            else
-                PickLampToHead();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+
+        if (Input.GetKey(KeyCode.E))
         {
             if (LampInHand)
                 DropLampFromHand();
-            else 
-                PickLampToHand();
         }
     }
 
-    public void PickLampToHead()
+    public void PickLampToHead(Bulb bulb)
     {
+        if (!CanInteract()) return;
+        Debug.Log("PickLampToHead");
+        dropCooldownTimer = 0.2f;
         LampInHead = true;
+        if (_animator) _animator.SetBool("Bulb", true);
+        Destroy(bulb.RootGameObject);
     }
 
     public void DropLampFromHead()
     {
+        if (!CanInteract()) return;
+        Debug.Log("DropLampFromHead");
+        dropCooldownTimer = 0.2f;
         LampInHead = false;
+        if (_animator) _animator.SetBool("Bulb", false);
+        BulbSpawner.SpawnBulb(transform.position);
     }
 
-    public void PickLampToHand()
+    public void PickLampToHand(Bulb bulb)
     {
+        if (!CanInteract()) return;
+        Debug.Log("PickLampToHand");
+        dropCooldownTimer = 0.2f;
         LampInHand = true;
+        if (_animator) _animator.SetBool("Bulb", true);
+        if (bulb)
+            Destroy(bulb.RootGameObject);
     }
 
     public void DropLampFromHand()
     {
+        if (!CanInteract()) return;
+        Debug.Log("DropLampFromHand");
+        dropCooldownTimer = 0.2f;
         LampInHand = false;
+        if (_animator) _animator.SetBool("Bulb", false);
+        BulbSpawner.SpawnBulb(transform.position);
+    }
+
+    public bool CanInteract()
+    {
+        return (dropCooldownTimer <= 0f);
+    }
+    public void RemoveBulbFromHand()
+    {
+        if (!CanInteract()) return;
+        dropCooldownTimer = 0.2f;
+        LampInHand = false;
+    }
+
+    public void SetDropEnabled(bool value)
+    {
+        _isEnabled = value;
     }
 }
