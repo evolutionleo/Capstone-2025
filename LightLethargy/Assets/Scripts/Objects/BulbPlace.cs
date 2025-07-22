@@ -7,6 +7,8 @@ namespace Objects
     {
         public bool HasBulb;
         public Action<bool> ChangedBulb;
+        public bool CanRemoveBulb = true;
+        public bool CanPlaceBulb = true;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -53,7 +55,7 @@ namespace Objects
                 return;
             }
 
-            if (HasBulb && player.CanInteract())
+            if (HasBulb && player.CanInteract() && CanRemoveBulb)
             {
                 if (!player.LampInHand)
                 {
@@ -61,7 +63,7 @@ namespace Objects
                     RemoveBulb();
                 }
             }
-            else if (player.LampInHand && player.CanInteract())
+            else if (player.LampInHand && player.CanInteract()&& CanPlaceBulb)
             {
                 player.RemoveBulbFromHand();
                 SetBulb();

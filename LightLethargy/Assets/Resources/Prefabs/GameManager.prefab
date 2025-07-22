@@ -102,6 +102,106 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &3869133728787908535
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6834099953959084601}
+  - component: {fileID: 2977046560190049776}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6834099953959084601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869133728787908535}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4698562987324644720}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2977046560190049776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3869133728787908535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48eaa81c08d71134e8006e88db4da48b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: jump
+    clip: {fileID: 8300000, guid: 12c2fe1b9f61858488d744c0ffcbffa3, type: 3}
+    volume: 0.285
+    volumeVariance: 0.049
+    pitch: 2.61
+    pitchVariance: 0.259
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: walk
+    clip: {fileID: 8300000, guid: 27b453e656e2f484e89b29801df0e4b3, type: 3}
+    volume: 0.413
+    volumeVariance: 0.029
+    pitch: 2.19
+    pitchVariance: 0.035
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ll1
+    clip: {fileID: 8300000, guid: b7f0bdb95ad0ef04dae8c7fb0c96a9b0, type: 3}
+    volume: 0.337
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: ll2
+    clip: {fileID: 8300000, guid: e188deac120831d47b1e2dca3ae198a8, type: 3}
+    volume: 0.18
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: screwLightOn
+    clip: {fileID: 8300000, guid: 6ce85f478a32ca34d8a0bc2e5c9817c8, type: 3}
+    volume: 0.192
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0.064
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: screwLightOff
+    clip: {fileID: 8300000, guid: 6ce85f478a32ca34d8a0bc2e5c9817c8, type: 3}
+    volume: 0.209
+    volumeVariance: 0
+    pitch: 0.6
+    pitchVariance: 0.029
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
 --- !u!1 &4103938164117758261
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +234,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9001757925551600709}
+  - {fileID: 6834099953959084601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1032649791121788085

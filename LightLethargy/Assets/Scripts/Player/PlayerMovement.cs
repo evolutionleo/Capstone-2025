@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private Vector2 _frameVelocity;
     private bool _cachedQueryStartInColliders;
 
+
     #region Interface
 
     public GameObject VisualGameObject;
@@ -172,6 +173,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         _bufferedJumpUsable = false;
         _coyoteUsable = false;
         _frameVelocity.y = _stats.JumpPower;
+        AudioManager.instance.Play("jump");
         Jumped?.Invoke();
     }
 
@@ -252,11 +254,13 @@ public class PlayerController : MonoBehaviour, IPlayerController
         // Yoyo tilt when moving on ground
         if (_grounded && Mathf.Abs(_frameVelocity.x) > 0.1f)
         {
+            if (!AudioManager.instance.IsPlaying("walk"))
+                AudioManager.instance.Play("walk");
             if (_tiltTween == null || !_tiltTween.IsActive())
             {
                 if (_tiltTween != null) _tiltTween.Kill();
                 _tiltTween = VisualGameObject.transform.DOLocalRotate(
-                        new Vector3(0, 0, moveTiltAngle), tiltDuration)
+                        new Vector3(0, 0, moveTiltAngle), tiltDuration).OnStepComplete(() => { })
                     .SetEase(Ease.InOutSine)
                     .SetLoops(-1, LoopType.Yoyo);
             }
