@@ -1,6 +1,7 @@
 using System;
 using Player;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class PlayerController : MonoBehaviour, IPlayerController
@@ -25,12 +26,27 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private float _time;
     private bool _isEnabled = true;
 
+    // DOTween squish/rotation
+    [Header("Juice")] [SerializeField] private float landSquishY = 0.7f;
+    [SerializeField] private float landSquishX = 1.2f;
+    [SerializeField] private float squishDuration = 0.12f;
+    [SerializeField] private float moveTiltAngle = 10f;
+    [SerializeField] private float tiltDuration = 0.3f;
+    private bool _wasGroundedLastFrame;
+    private Tween _tiltTween;
+
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
         _col = GetComponent<CapsuleCollider2D>();
         Instance = this;
         _cachedQueryStartInColliders = Physics2D.queriesStartInColliders;
+        GroundedChanged += SquishOnLanding;
+    }
+
+    private void OnDestroy()
+    {
+        GroundedChanged -= SquishOnLanding;
     }
 
     public void Enable(bool value)
@@ -83,6 +99,7 @@ public class PlayerController : MonoBehaviour, IPlayerController
         HandleGravity();
 
         ApplyMovement();
+        HandleJuice();
     }
 
     #region Collisions
@@ -205,6 +222,54 @@ public class PlayerController : MonoBehaviour, IPlayerController
                 VisualGameObject.transform.localScale.y, VisualGameObject.transform.localScale.z);
         _rb.velocity = _frameVelocity;
     }
+
+    #region Juice
+
+    private void SquishOnLanding(bool arg1, float arg2)
+    {
+        if (!VisualGameObject || !arg1) return;
+        if (arg2 < 20f) return;
+        VisualGameObject.transform.DOKill();
+        VisualGameObject.transform.localScale = new Vector3(
+            VisualGameObject.transform.localScale.x, 1f, 1f);
+        VisualGameObject.transform.DOPunchScale(
+                new Vector3(Mathf.Sign(VisualGameObject.transform.localScale.x) * landSquishX, landSquishY, 1f), 0.15f)
+            .OnComplete(
+                () =>
+                {
+                    VisualGameObject.transform.localScale = new Vector3(
+                        VisualGameObject.transform.localScale.x, 1f, 1f);
+                });
+    }
+
+    private void HandleJuice()
+    {
+        // Yoyo tilt when moving on ground
+        if (_grounded && Mathf.Abs(_frameVelocity.x) > 0.1f)
+        {
+            if (_tiltTween == null || !_tiltTween.IsActive())
+            {
+                if (_tiltTween != null) _tiltTween.Kill();
+                _tiltTween = VisualGameObject.transform.DOLocalRotate(
+                        new Vector3(0, 0, moveTiltAngle), tiltDuration)
+                    .SetEase(Ease.InOutSine)
+                    .SetLoops(-1, LoopType.Yoyo);
+            }
+        }
+        else
+        {
+            if (_tiltTween != null && _tiltTween.IsActive())
+            {
+                _tiltTween.Kill();
+                _tiltTween = null;
+            }
+
+            if (VisualGameObject != null)
+                VisualGameObject.transform.DOLocalRotate(Vector3.zero, tiltDuration / 2f).SetEase(Ease.InOutSine);
+        }
+    }
+
+    #endregion
 
 #if UNITY_EDITOR
     private void OnValidate()
