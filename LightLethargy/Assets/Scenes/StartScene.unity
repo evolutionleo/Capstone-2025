@@ -485,6 +485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioName: start
+  stopSoundName: start
+  needToBlackout: 1
 --- !u!114 &961684742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +849,37 @@ MonoBehaviour:
     text: 1
   pauseBetweenReplics: 1.5
   camera: {fileID: 1938895688}
+  StartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  FinishEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1205554618}
+        m_TargetAssemblyTypeName: Objects.StartDialogObject, Assembly-CSharp
+        m_MethodName: FadeBlockout
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1205554618}
+        m_TargetAssemblyTypeName: Objects.StartDialogObject, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  skip: 1
 --- !u!1 &1590543252
 GameObject:
   m_ObjectHideFlags: 0

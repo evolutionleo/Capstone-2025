@@ -6,15 +6,19 @@ namespace Objects
     public class StartLevelSoundTrack : MonoBehaviour
     {
         public string audioName;
+        public string stopSoundName;
+        public bool needToBlackout = true;
+
         private void Start()
         {
             AudioManager.instance.Play(audioName);
-            Blackout.Instance.FadeOut();
+            if (needToBlackout)
+                Blackout.Instance.FadeOut();
         }
 
         private void OnDestroy()
         {
-            AudioManager.instance.StopPlaying(audioName);
+            AudioManager.instance.StopPlaying(stopSoundName);
         }
     }
 }

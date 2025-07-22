@@ -66,5 +66,6 @@ namespace Objects
         public DialogPlayer dialogObject;
         public float additionalStartPause;
         public string text;
+        public float additionalEndPause;
     }
 }

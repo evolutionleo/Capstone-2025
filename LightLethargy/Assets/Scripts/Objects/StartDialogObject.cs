@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Objects
@@ -14,6 +15,10 @@ namespace Objects
         public float pauseBetweenReplics;
 
         public CinemachineVirtualCamera camera;
+        public UnityEvent StartEvent;
+        public UnityEvent FinishEvent;
+
+        public bool skip;
 
         public void Shake(float shake)
         {
@@ -23,19 +28,42 @@ namespace Objects
 
         private IEnumerator Start()
         {
-#if !UNITY_EDITOR
-            yield return new WaitForSeconds(1.5f);
-            foreach (var dialog in dialogs)
+            StartEvent?.Invoke();
+            if (!skip)
             {
-                dialog.Event?.Invoke();
-                yield return new WaitForSeconds(dialog.additionalStartPause);
-                yield return dialog.dialogObject.PlayDialog(dialog.text);
-                yield return new WaitForSeconds(pauseBetweenReplics);
-                dialog.dialogObject.Clear();
+                yield return new WaitForSeconds(1.5f);
+                foreach (var dialog in dialogs)
+                {
+                    dialog.Event?.Invoke();
+                    yield return new WaitForSeconds(dialog.additionalStartPause);
+                    yield return dialog.dialogObject.PlayDialog(dialog.text);
+                    yield return new WaitForSeconds(pauseBetweenReplics);
+                    yield return new WaitForSeconds(dialog.additionalEndPause);
+                    dialog.dialogObject.Clear();
+                }
             }
-#endif
-            Blackout.Instance.FadeInstantly(1);
+
             yield return null;
+            FinishEvent?.Invoke();
+        }
+
+        public void BlockInput()
+        {
+            PlayerInputSystem.Instance.BlockInput();
+        }
+
+        public void UnblockInput()
+        {
+            PlayerInputSystem.Instance.UnblockInput();
+        }
+
+        public void FadeBlockout()
+        {
+            Blackout.Instance.FadeInstantly(1);
+        }
+
+        public void NextScene()
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
