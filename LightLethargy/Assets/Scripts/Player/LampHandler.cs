@@ -5,11 +5,17 @@ public class LampHandler : MonoBehaviour
     public static LampHandler Instance { get; private set; }
 
     public bool HasLamp => LampInHead || LampInHand;
-    public bool LampInHead { get; private set; }
-    public bool LampInHand { get; private set; }
+    public bool LampInHead;
+    public bool LampInHand;
 
     [SerializeField] private float timeWithoutLampToDie = 5f;
     private float timeWithoutLamp;
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void Awake()
     {
@@ -24,6 +30,7 @@ public class LampHandler : MonoBehaviour
     private void Update()
     {
         HandleInput();
+        SetAnimator();
         if (!LampInHead)
         {
             timeWithoutLamp += Time.deltaTime;
@@ -38,20 +45,26 @@ public class LampHandler : MonoBehaviour
         }
     }
 
+    private void SetAnimator()
+    {
+        _animator.SetBool("Head", LampInHead);
+        _animator.SetBool("Hands", LampInHand);
+    }
+
     private void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (LampInHead)
                 DropLampFromHead();
-            else if (HasLamp)
+            else
                 PickLampToHead();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (LampInHand)
                 DropLampFromHand();
-            else if (HasLamp)
+            else 
                 PickLampToHand();
         }
     }
@@ -59,7 +72,6 @@ public class LampHandler : MonoBehaviour
     public void PickLampToHead()
     {
         LampInHead = true;
-        LampInHand = false;
     }
 
     public void DropLampFromHead()
@@ -70,7 +82,6 @@ public class LampHandler : MonoBehaviour
     public void PickLampToHand()
     {
         LampInHand = true;
-        LampInHead = false;
     }
 
     public void DropLampFromHand()
