@@ -64,9 +64,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
     {
         _frameInput = new FrameInput
         {
-            JumpDown = Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.C),
-            JumpHeld = Input.GetButton("Jump") || Input.GetKey(KeyCode.C),
-            Move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"))
+            JumpDown = PlayerInputSystem.Instance.JumpPressed(),
+            JumpHeld = PlayerInputSystem.Instance.JumpHeld(),
+            Move = new Vector2(PlayerInputSystem.Instance.GetHorizontal(), PlayerInputSystem.Instance.GetVertical())
         };
 
         if (_stats.SnapInput)
@@ -213,6 +213,11 @@ public class PlayerController : MonoBehaviour, IPlayerController
     }
 
     #endregion
+
+    public void AddForce(Vector2 force)
+    {
+        _frameVelocity += force;
+    }
 
     private void ApplyMovement()
     {

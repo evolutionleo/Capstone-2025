@@ -15,7 +15,7 @@ public class LampHandler : MonoBehaviour
     private Animator _animator;
     private float dropCooldown = 0.1f;
     private float dropCooldownTimer = 0f;
-    private bool _isEnabled;
+    private bool _isEnabled = true;
 
     private void Start()
     {
@@ -24,12 +24,12 @@ public class LampHandler : MonoBehaviour
 
     public void ReactToBulb(Bulb bulb)
     {
-        if (Input.GetKey(KeyCode.Q) && !LampInHead)
+        if (PlayerInputSystem.Instance.Interact2Held() && !LampInHead)
         {
             PickLampToHead(bulb);
         }
 
-        if (Input.GetKey(KeyCode.E) && !LampInHand)
+        if (PlayerInputSystem.Instance.InteractHeld() && !LampInHand)
         {
             PickLampToHand(bulb);
         }
@@ -74,6 +74,7 @@ public class LampHandler : MonoBehaviour
             if (timeWithoutLamp >= timeWithoutLampToDie)
             {
                 DeathHandler.Instance.KillPlayer();
+                timeWithoutLamp = -100000f;
             }
         }
         else
@@ -90,17 +91,17 @@ public class LampHandler : MonoBehaviour
 
     private void HandleInput()
     {
-        if(!_isEnabled) return;
-        if (Input.GetKey(KeyCode.Q))
-        {
-            if (LampInHead)
-                DropLampFromHead();
-        }
-
-        if (Input.GetKey(KeyCode.E))
+        if (!_isEnabled) return;
+        if (PlayerInputSystem.Instance.InteractHeld())
         {
             if (LampInHand)
                 DropLampFromHand();
+        }
+
+        if (PlayerInputSystem.Instance.Interact2Held())
+        {
+            if (LampInHead)
+                DropLampFromHead();
         }
     }
 
@@ -149,6 +150,7 @@ public class LampHandler : MonoBehaviour
     {
         return (dropCooldownTimer <= 0f);
     }
+
     public void RemoveBulbFromHand()
     {
         if (!CanInteract()) return;

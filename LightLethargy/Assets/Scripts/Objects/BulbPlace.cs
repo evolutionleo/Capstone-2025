@@ -48,7 +48,7 @@ namespace Objects
 
         public void InteractWithPlayer(LampHandler player)
         {
-            if (!Input.GetKey(KeyCode.E))
+            if (!PlayerInputSystem.Instance.InteractHeld())
             {
                 return;
             }
