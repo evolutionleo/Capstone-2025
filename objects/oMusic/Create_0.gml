@@ -1,5 +1,0 @@
-///@desc 
-
-music = audio_play_sound(aMusic, 1, true)
-
-muted = false
