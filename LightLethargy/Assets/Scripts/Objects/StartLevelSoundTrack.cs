@@ -9,6 +9,7 @@ namespace Objects
         private void Start()
         {
             AudioManager.instance.Play(audioName);
+            Blackout.Instance.FadeOut();
         }
 
         private void OnDestroy()

@@ -12,7 +12,7 @@ namespace Objects
 
         private void Awake()
         {
-            if (Instance!=null)
+            if (Instance != null)
             {
                 Destroy(gameObject);
                 return;
@@ -22,10 +22,16 @@ namespace Objects
             Instance = this;
         }
 
+        public void FadeInstantly(float value)
+        {
+            CanvasGroup.alpha = value;
+        }
+
         public void FadeIn()
         {
             CanvasGroup.DOFade(1f, 0.2f);
         }
+
         public void FadeOut()
         {
             CanvasGroup.DOFade(0f, 0.2f);

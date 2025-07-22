@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Objects
 {
@@ -29,27 +31,40 @@ namespace Objects
             if (_startedDialog) return;
             if (enabled)
             {
+                PlayerInputSystem.Instance.BlockInput();
+                _startedDialog = true;
+                dialogs[_currentIndex].dialogObject.Play(dialogs[_currentIndex].text);
             }
         }
 
-        public IEnumerator PlayDialog()
-        {
-            PlayerInputSystem.Instance.BlockInput();
-            foreach (var replic in dialogs)
-            {
-                
-            }
+        private int _currentIndex;
 
-            BulbPlace.RemoveBulb();
-            BulbSpawner.SpawnBulb(transform.position);
-            PlayerInputSystem.Instance.UnblockInput();
-            yield return null;
+        private void Update()
+        {
+            if (Input.anyKeyDown && _startedDialog)
+            {
+                dialogs[_currentIndex].dialogObject.Stop();
+                _currentIndex++;
+                if (_currentIndex >= dialogs.Count)
+                {
+                    PlayerInputSystem.Instance.UnblockInput();
+                    BulbPlace.RemoveBulb();
+                    BulbSpawner.SpawnBulb(transform.position);
+                }
+                else
+                {
+                    dialogs[_currentIndex].dialogObject.Play(dialogs[_currentIndex].text);
+                }
+            }
         }
     }
 
+    [Serializable]
     public class DialogReplic
     {
-        public DialogObject dialogObject;
+        public UnityEvent Event;
+        public DialogPlayer dialogObject;
+        public float additionalStartPause;
         public string text;
     }
 }
