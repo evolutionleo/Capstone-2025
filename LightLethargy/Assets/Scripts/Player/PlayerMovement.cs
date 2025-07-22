@@ -200,7 +200,9 @@ public class PlayerController : MonoBehaviour, IPlayerController
     private void ApplyMovement()
     {
         if (_frameVelocity.x != 0)
-            VisualGameObject.transform.localScale = new Vector3(1f * _frameVelocity.x >= 0f ? 1f : -1f, 1f, 1f);
+            VisualGameObject.transform.localScale = new Vector3(
+                1f * _frameVelocity.x >= 0f ? 1f : -1f,
+                VisualGameObject.transform.localScale.y, VisualGameObject.transform.localScale.z);
         _rb.velocity = _frameVelocity;
     }
 
