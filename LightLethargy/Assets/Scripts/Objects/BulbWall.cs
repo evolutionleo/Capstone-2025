@@ -39,22 +39,22 @@ namespace Objects
             {
                 if (IsInverted)
                 {
-                    WallTransform.DOScale(Direction, AnimationSpeed);
+                    WallTransform.DOScale(_initialScale, AnimationSpeed);
                 }
                 else
                 {
-                    WallTransform.DOScale(_initialScale, AnimationSpeed);
+                    WallTransform.DOScale(Direction, AnimationSpeed);
                 }
             }
             else
             {
                 if (IsInverted)
                 {
-                    WallTransform.DOScale(_initialScale, AnimationSpeed);
+                    WallTransform.DOScale(Direction, AnimationSpeed);
                 }
                 else
                 {
-                    WallTransform.DOScale(Direction, AnimationSpeed);
+                    WallTransform.DOScale(_initialScale, AnimationSpeed);
                 }
             }
         }
