@@ -576,7 +576,7 @@ Transform:
   m_GameObject: {fileID: 513036967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2222214, y: -0.5, z: -10}
+  m_LocalPosition: {x: -1.2372704, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1414,11 +1414,6 @@ PrefabInstance:
       propertyPath: PairedDoor
       value: 
       objectReference: {fileID: 690137498}
-    - target: {fileID: 5123338269569921063, guid: b2308c322dea7a84ba81298379e141f8,
-        type: 3}
-      propertyPath: PairedDoor
-      value: 
-      objectReference: {fileID: 1738081783}
     - target: {fileID: 7688755619912301995, guid: b2308c322dea7a84ba81298379e141f8,
         type: 3}
       propertyPath: m_Name
@@ -1795,18 +1790,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1738081783 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5123338269569921063, guid: b2308c322dea7a84ba81298379e141f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 588182966}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb1f61ce0578224fb247caa479cc966, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1841283252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 384418111467261483, guid: 1905d8f215ad9784d9429091ab263d8c,
