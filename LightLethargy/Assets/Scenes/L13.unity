@@ -786,7 +786,7 @@ MonoBehaviour:
       \u0438 \u0443\u043B\u0435\u0442\u0435\u0442\u044C \u0438\u0437 \u044D\u0442\u043E\u0433\u043E
       \u043C\u0438\u043B\u043E\u0433\u043E \u043C\u0435\u0441\u0442\u0435\u0447\u043A\u0430"
     additionalEndPause: 0
-  pauseBetweenReplics: 2
+  pauseBetweenReplics: 1
   camera: {fileID: 0}
   StartEvent:
     m_PersistentCalls:

@@ -830,7 +830,7 @@ MonoBehaviour:
     additionalStartPause: 0
     text: "\u0422\u0430\u043A \u0433\u043E\u0440\u043E\u0434 \u043D\u0435 \u043F\u0443\u0441\u0442\u0443\u0435\u0442?"
     additionalEndPause: 0
-  pauseBetweenReplics: 2
+  pauseBetweenReplics: 1
   camera: {fileID: 0}
   StartEvent:
     m_PersistentCalls:
