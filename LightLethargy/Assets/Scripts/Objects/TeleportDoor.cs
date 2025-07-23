@@ -1,6 +1,7 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Objects
 {
@@ -9,6 +10,7 @@ namespace Objects
         public TeleportDoor PairedDoor;
         public float TeleportDelay = 0.2f;
         public float Cooldown = 0.5f;
+        [SerializeField] private UnityEvent _doAfterTeleport;
 
         private bool _canTeleport = true;
 
@@ -38,6 +40,8 @@ namespace Objects
             yield return new WaitForSeconds(Cooldown);
             PlayerInputSystem.Instance.UnblockInput();
             _canTeleport = true;
+            
+            _doAfterTeleport.Invoke();
         }
 
         private IEnumerator TeleportCooldown()

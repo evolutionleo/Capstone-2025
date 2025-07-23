@@ -19,11 +19,14 @@ public class PlayerInputSystem : MonoBehaviour
     public void BlockInput()
     {
         _blocked = true;
+        Debug.Log("Blocked player input");
     }
 
     public void UnblockInput()
     {
+        Debug.Log($"Before unlocking player input {_blocked}");
         _blocked = false;
+        Debug.Log("Unblocked player input");
     }
 
     public float GetHorizontal()
