@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -44,6 +45,7 @@ namespace Objects
             if (Input.anyKeyDown && _startedDialog)
             {
                 dialogs[_currentIndex].dialogObject.Stop();
+                dialogs[_currentIndex].dialogObject.Clear();
                 _currentIndex++;
                 if (_currentIndex >= dialogs.Count)
                 {

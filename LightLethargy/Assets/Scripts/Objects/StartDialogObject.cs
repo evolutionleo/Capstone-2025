@@ -36,6 +36,7 @@ namespace Objects
                 {
                     dialog.Event?.Invoke();
                     yield return new WaitForSeconds(dialog.additionalStartPause);
+                    Debug.Log(dialog.text);
                     yield return dialog.dialogObject.PlayDialog(dialog.text);
                     yield return new WaitForSeconds(pauseBetweenReplics);
                     yield return new WaitForSeconds(dialog.additionalEndPause);
