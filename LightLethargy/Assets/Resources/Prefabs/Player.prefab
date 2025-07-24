@@ -537,7 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LampInHead: 1
   LampInHand: 0
-  timeWithoutLampToDie: 5
+  timeWithoutLampToDie: 10
 --- !u!114 &8202819563364032613
 MonoBehaviour:
   m_ObjectHideFlags: 0
