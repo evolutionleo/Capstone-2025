@@ -492,6 +492,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5920507517591364697, guid: 1905d8f215ad9784d9429091ab263d8c, type: 3}
+      propertyPath: m_margin.x
+      value: 1.0810795
+      objectReference: {fileID: 0}
     - target: {fileID: 9165220318279006841, guid: 1905d8f215ad9784d9429091ab263d8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -13
