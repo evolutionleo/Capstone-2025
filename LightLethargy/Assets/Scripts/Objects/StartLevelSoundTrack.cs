@@ -5,20 +5,37 @@ namespace Objects
 {
     public class StartLevelSoundTrack : MonoBehaviour
     {
-        public string audioName;
-        public string stopSoundName;
-        public bool needToBlackout = true;
+        public AudioClip clip;
+        public AudioClip overridingClip;
+        [SerializeField] private AudioSource source;
 
+        private static StartLevelSoundTrack instance;
+        
         private void Start()
         {
-            AudioManager.instance.Play(audioName);
-            if (needToBlackout)
-                Blackout.Instance.FadeOut();
+            if (instance != null)
+            {
+                if (instance.overridingClip == clip)
+                {
+                    Destroy(instance.gameObject);
+                }
+                else
+                {
+                    Destroy(gameObject);
+                    return;
+                }
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+
+            source.clip = clip;
+            source.Play();
         }
 
         private void OnDestroy()
         {
-            AudioManager.instance.StopPlaying(stopSoundName);
+            source.Stop();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Objects
         {
             if (Instance != null)
             {
+                Instance.FadeOut();
                 Destroy(gameObject);
                 return;
             }
@@ -21,7 +22,7 @@ namespace Objects
             DontDestroyOnLoad(gameObject);
             Instance = this;
         }
-
+        
         public void FadeInstantly(float value)
         {
             CanvasGroup.alpha = value;
