@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 513036969}
   - component: {fileID: 513036968}
   - component: {fileID: 513036972}
+  - component: {fileID: 513036973}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -605,6 +606,21 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &513036973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513036967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab187e6763664e548b1385bd09adf2d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioName: ll2
+  stopSoundName: ll1
+  needToBlackout: 1
 --- !u!1 &513941957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1003,7 +1019,6 @@ GameObject:
   - component: {fileID: 875643525}
   - component: {fileID: 875643524}
   - component: {fileID: 875643526}
-  - component: {fileID: 875643527}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -1082,21 +1097,6 @@ MonoBehaviour:
   m_Damping: 2.45
   m_MaxWindowSize: -1
   m_Padding: 0
---- !u!114 &875643527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875643523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab187e6763664e548b1385bd09adf2d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioName: LL 2
-  stopSoundName: LL 1
-  needToBlackout: 1
 --- !u!1 &877835155
 GameObject:
   m_ObjectHideFlags: 0

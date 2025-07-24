@@ -775,7 +775,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     dialogObject: {fileID: 911019466}
-    additionalStartPause: 1
+    additionalStartPause: 0
     text: "\u041A\u0430\u043A-\u0442\u043E \u0437\u0434\u0435\u0441\u044C\u2026 \u0441\u043E\u0432\u0441\u0435\u043C
       \u043F\u0443\u0441\u0442\u044B\u043D\u043D\u043E."
     additionalEndPause: 0
@@ -848,7 +848,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  skip: 0
+  skip: 1
 --- !u!1 &1433487917
 GameObject:
   m_ObjectHideFlags: 0
