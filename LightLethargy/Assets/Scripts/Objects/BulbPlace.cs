@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Objects
 {
@@ -9,6 +10,9 @@ namespace Objects
         public Action<bool> ChangedBulb;
         public bool CanRemoveBulb = true;
         public bool CanPlaceBulb = true;
+
+        [SerializeField] private UnityEvent onBulbInstalled;
+        [SerializeField] private UnityEvent onTryInstallingBulb;
 
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -46,6 +50,7 @@ namespace Objects
         {
             HasBulb = true;
             ChangedBulb?.Invoke(true);
+            onBulbInstalled.Invoke();
         }
 
         public void InteractWithPlayer(LampHandler player)
@@ -54,7 +59,7 @@ namespace Objects
             {
                 return;
             }
-
+            
             if (HasBulb && player.CanInteract() && CanRemoveBulb)
             {
                 if (!player.LampInHand)
@@ -63,11 +68,20 @@ namespace Objects
                     RemoveBulb();
                 }
             }
-            else if (player.LampInHand && player.CanInteract()&& CanPlaceBulb)
+            else if (player.LampInHand && player.CanInteract())
             {
-                player.RemoveBulbFromHand();
-                SetBulb();
+                if (CanPlaceBulb)
+                {
+                    player.RemoveBulbFromHand();
+                    SetBulb();
+                }
+                else
+                {
+                    onTryInstallingBulb.Invoke();
+                }
             }
         }
+        
+        public void SetCanPlaceBulb(bool canPlaceBulb) => CanPlaceBulb = canPlaceBulb;
     }
 }

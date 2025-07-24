@@ -18,6 +18,8 @@ namespace Objects
 
         public List<DialogReplic> dialogs;
 
+        [SerializeField] private UnityEvent onDialogEnded;
+
         private void Awake()
         {
             BulbPlace.ChangedBulb += BulbPlace_ChangedBulb;
@@ -35,6 +37,7 @@ namespace Objects
             {
                 PlayerInputSystem.Instance.BlockInput();
                 _startedDialog = true;
+                Debug.Log($"Current index: {_currentIndex} {dialogs.Count}");
                 dialogs[_currentIndex].dialogObject.Play(dialogs[_currentIndex].text);
             }
         }
@@ -53,6 +56,8 @@ namespace Objects
                     PlayerInputSystem.Instance.UnblockInput();
                     BulbPlace.RemoveBulb();
                     BulbSpawner.SpawnBulb(transform.position);
+                    
+                    onDialogEnded.Invoke();
                 }
                 else
                 {
