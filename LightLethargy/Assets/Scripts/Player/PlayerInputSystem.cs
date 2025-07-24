@@ -68,4 +68,6 @@ public class PlayerInputSystem : MonoBehaviour
     {
         return !_blocked && (Input.GetKeyDown(KeyCode.W) || Input.GetAxisRaw("Vertical") > 0.5f);
     }
+
+    public bool InteractDownRegardlessOfBlock() => Input.GetKeyDown(KeyCode.E);
 }

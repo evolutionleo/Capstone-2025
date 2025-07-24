@@ -16,14 +16,13 @@ namespace Objects
 
         private void Awake()
         {
+            _initialScale = WallTransform.localScale;
+            
             if (IsInverted)
             {
                 WallTransform.localScale = Direction;
             }
-            else
-            {
-            }
-            _initialScale = WallTransform.localScale;
+            
             BulbPlace.ChangedBulb += BulbPlace_ChangedBulb;
         }
 
