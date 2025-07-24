@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920507517591364697, guid: 1905d8f215ad9784d9429091ab263d8c, type: 3}
       propertyPath: m_margin.x
-      value: 0.016490936
+      value: 2.1756573
       objectReference: {fileID: 0}
     - target: {fileID: 9165220318279006841, guid: 1905d8f215ad9784d9429091ab263d8c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1762,7 +1762,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  skip: 0
+  skip: 1
 --- !u!114 &1878352776
 MonoBehaviour:
   m_ObjectHideFlags: 0
