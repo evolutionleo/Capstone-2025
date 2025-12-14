@@ -4,6 +4,7 @@
 A 2D puzzle-platformer game, which story takes place in a world of robot-like creatures whose source of life is an electrical charge. Unfortunately, the power had been running out, so the expedition was sent off to find a new source of energy, leaving the city fully de-energized. The player can experience exploring the town and learning about its inhabitants using inventive light bulb mechanics. The atmosphere is built with a captivating, lightly philosophical story, beautiful paper-like style, and original music. 
 
 Light up the world around you and find out its secrets! 
+Gamelay video: https://youtu.be/EvkCLOVfADg
 
 ## Main Features ⚙️
 
@@ -27,12 +28,6 @@ Light up the world around you and find out its secrets!
 4. Download the .zip file containing the executable
 5. Extract the archive
 6. Inside the extracted folder, double-click the .exe file to launch the game
-
-### Build with the GameMaker 
-1. Clone the project folder to your local machine
-2. Inside the folder, locate the file with .yyp extension
-3. Open the .yyp file using [GameMaker](gamemaker.io) IDE
-4. Press the Run button or use the shortcut (F5) to build and launch the game
 
 ## Our Team 🤵🤵‍♀
 
